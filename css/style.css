@@ -63,7 +63,7 @@ body {
   width: 100%;
 }
 .header__subtitle-box {
-  margin: 42.5vmin 0 28.125vmin;
+  margin: 40vmin 0 27vmin;
 }
 .header__subtitle_1st-line {
   display: block;
@@ -147,7 +147,6 @@ body {
 }
 .person {
   position: relative;
-  padding-top: 7.8125vmin;
 }
 .person__title {
   display: block;
@@ -175,22 +174,24 @@ body {
      1px  1px 0   #B9B9B9;
 }
 .person-margins {
-  margin-bottom: 76.5625vmin;
+  padding-top: 5.4vmin;
+  padding-bottom: 75vmin;
 }
 .person__picture-block-foot {
   position: absolute;
   top: 25vmin;
   left: 21.875vmin;
   z-index: 3
-  /*width: 60vmin; не понимаю, почему картинка не скэлится плавно*/
-/*поигрался с разрешениями и думаю, что привязать его лучше к правому краю?*/
 }
-.person__picture{
-  width: 100%;
+.person__picture-footballer{
+  width: 60vmin;
+}
+.person__picture-basketballer{
+  width: 94.375vmin;
 }
 .person__point-1 {
   background-color: #fafafa;
-  padding: 25.9375vmin 6.25vmin 16.85vmin;
+  padding: 24.6vmin 6.25vmin 16vmin;
 }
 .person_title-block {
   display: -webkit-flex;
@@ -250,11 +251,11 @@ body {
   letter-spacing: 0.234vmin;
 }
 .person__point-2 {
-  padding: 18.75vmin 6.25vmin 16.85vmin;
+  padding: 18vmin 6.25vmin 16vmin;
   background-color: #f5f4f9;
 }
 .person__point-3-athletes {
-  padding: 18.75vmin 6.25vmin 16.85vmin;
+  padding: 18vmin 6.25vmin 16vmin;
   background-color: #5e42b0;
 }
 .person__presubtitle-inverse {
@@ -266,7 +267,7 @@ body {
 .person__picture-block-bask {
   position: absolute;
   top: 25vmin;
-  left: 3.125vmin;
+  right: 3.125vmin;
   z-index: 3
   /*поигрался с разрешениями и думаю, что привязать его лучше к правому краю?*/
 }
@@ -277,7 +278,7 @@ body {
   background-color: #ffffff;
 }
 .person__point-3-players {
-  padding: 18.75vmin 6.25vmin 16.85vmin;
+  padding: 18vmin 6.25vmin 16vmin;
   background-color: #090c35;
 }
 
@@ -330,7 +331,7 @@ body {
 }
 .actions__desc {
   width: 100%;
-  padding: 10.3125vmin 6.25vmin 23.4375vmin;
+  padding: 9vmin 6.25vmin 23.4375vmin;
 }
 .actions__title {
   display: block;
@@ -370,7 +371,7 @@ body {
 
 .footer {
   color: #ffffff;
-  background: url(../img/football_767.jpg) #0f1133;
+  background: url(../img/game_767.jpg) #0f1133;
   background-repeat: no-repeat;
   background-position: center center;
   background-size: cover;
@@ -393,7 +394,7 @@ body {
   box-sizing: border-box;
   width: 22.5vmin;
   height: 22.5vmin;
-  margin: 0 auto 18.75vmin;
+  margin: 0 auto;
   border-radius: 5.3125vmin 5.3125vmin 5.625vmin;
   background: rgb(119,85,215); /* Old browsers */
   background: -moz-linear-gradient(top,  rgba(119,85,215,1) 0%, rgba(80,55,154,1) 100%); /* FF3.6-15 */
@@ -408,7 +409,7 @@ body {
   width: 18.75vmin;
 }
 .footer__subtitle-box {
-  margin-bottom: 23.75vmin;
+  margin: 17.3vmin auto 23.75vmin;
 }
 .footer__title {
   display: block;
