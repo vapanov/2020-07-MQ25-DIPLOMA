@@ -115,7 +115,7 @@ html, body {
   display: flex;
   align-items: flex-start;
   justify-content: flex-start;
-  flex-basis: 11.8rem;
+  min-width: 12rem;
 }
 .appl-button-logo {
   margin-top: 0.4rem;
@@ -330,7 +330,7 @@ html, body {
   opacity: 0.3;
   width: 1.5rem;
   height: 0.4rem;
-  border-radius: 0.02rem;
+  border-radius: 0.2rem;
 }
 .actions__desc {
   width: 100%;
