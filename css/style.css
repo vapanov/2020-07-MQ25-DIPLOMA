@@ -64,7 +64,7 @@ html, body {
   width: 100%;
 }
 .header__subtitle-box {
-  margin: 12.8rem 0 8.6rem;
+  padding: 12.8rem 0 8.6rem;
 }
 .header__subtitle_1st-line {
   display: block;
@@ -83,7 +83,7 @@ html, body {
   font-size: 2.8rem;
   line-height: 3.132rem; /*этого нет в макете, взял с предыдущего элемента*/
   letter-spacing: 0.14rem;
-  margin: 2.8rem 0 0 4.4rem;
+  padding: 2.8rem 0 0 4.4rem;
 /*  или прибить к правому краю?*/
 }
 .button-block{
@@ -118,16 +118,16 @@ html, body {
   min-width: 12rem;
 }
 .appl-button-logo {
-  margin-top: 0.4rem;
+  padding-top: 0.4rem;
 }
 .goog-button-logo {
-  margin-top: 0.6rem;
+  padding-top: 0.6rem;
 }
 .app-button-logo-svg {
   height: 2.4rem;
 }
 .app-button-text-block{
-  margin: 0.8rem 0 0.8rem 1rem;
+  padding: 0.8rem 0 0.8rem 1rem;
 }
 .app-button-text-1st-line {
   color: #ffffff;
@@ -135,7 +135,7 @@ html, body {
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.04rem;
-  margin-bottom: 0.4rem;
+  padding-bottom: 0.4rem;
 }
 .app-button-text-2nd-line {
   color: #ffffff;
@@ -204,7 +204,7 @@ html, body {
   display: -o-flex;
   display: flex;
   flex-direction: row;
-  margin-bottom: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 .person__presubtitle-block {
   display: -webkit-flex;
@@ -245,7 +245,7 @@ html, body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.115rem;
-  margin-left: 1rem;
+  padding-left: 1rem;
 }
 .person__description {
   color: #000000;
@@ -362,7 +362,7 @@ html, body {
      0.1rem  0.1rem 0   #B9B9B9;
 }
 .actions__title-margins {
-  margin-bottom: 2.3rem;
+  padding-bottom: 2.3rem;
 }
 .actions__desc-text {
   color: #000000;
@@ -412,7 +412,8 @@ html, body {
   width: 6rem;
 }
 .footer__subtitle-box {
-  margin: 5.5rem auto 7.6rem;
+  padding: 5.5rem 0 7.6rem;
+  margin: 0 auto;
 }
 .footer__title {
   display: block;
@@ -422,7 +423,7 @@ html, body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.13rem; /*должно быть 0.16. но не переводит на новую строку :(*/
-  margin-bottom: 1.5rem;
+  padding-bottom: 1.5rem;
 }
 .footer__subtitle {
   display: block;
@@ -433,6 +434,6 @@ html, body {
   text-transform: uppercase;
   letter-spacing: 0.07rem;
 }
-.footer__button-block {
-  margin-bottom: 8.2rem;
+.footer__text-logo {
+  padding-top: 8.2rem;
 }
