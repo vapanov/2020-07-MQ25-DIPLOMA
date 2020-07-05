@@ -117,8 +117,11 @@ html, body {
   justify-content: flex-start;
   flex-basis: 11.8rem;
 }
-.app-button-logo {
+.appl-button-logo {
   margin-top: 0.4rem;
+}
+.goog-button-logo {
+  margin-top: 0.6rem;
 }
 .app-button-logo-svg {
   height: 2.4rem;
