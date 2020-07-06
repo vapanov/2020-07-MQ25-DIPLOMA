@@ -14,6 +14,8 @@ html, body {
   background-color: #ffffff;
   font-family: Open Sans, arial, sans-serif;
   font-size: 3.125vmin;
+/*  font-size: calc( (100vw - Vmin)/(Vmax - Vmin) * (Fmax - Fmin) + Fmin);
+    font-size: calc( (100vw - 480px)/(1280 - 480) * (24 - 16) + 16px);*/
 }
 .visually-hidden {
   width: 1px;
@@ -67,23 +69,24 @@ html, body {
   padding: 12.8rem 0 8.6rem;
 }
 .header__subtitle_1st-line {
-  display: block;
+/*  display: block;*/
   text-transform: uppercase;
   color: #ffffff;
   font-weight: 700;
   font-size: 2.8rem;
-  line-height: 3.132rem;
+  line-height: normal;
+/*  line-height: 3.132rem;*/
   letter-spacing: 0.154rem;
 }
 .header__subtitle_2nd-line {
   display: block;
   text-transform: uppercase;
   color: #ffffff;
-  font-weight: 700;
+/*  font-weight: 700;
   font-size: 2.8rem;
-  line-height: 3.132rem; /*этого нет в макете, взял с предыдущего элемента*/
-  letter-spacing: 0.14rem;
-  padding: 2.8rem 0 0 4.4rem;
+  line-height: 3.132rem; этого нет в макете, взял с предыдущего элемента
+  letter-spacing: 0.14rem;*/
+  padding: 1rem 0 0 4.1rem;
 /*  или прибить к правому краю?*/
 }
 .button-block{
@@ -91,22 +94,29 @@ html, body {
  /*делаем закладку на другие разрешения*/
   flex-direction: column;
   justify-content: space-between;
-  height: calc(3.5rem*2 + 1.4rem);
+/*  height: calc(3.5rem*2 + 1.4rem);*/
 }
 .apps-button {
   display: block;
-  border-radius: 1.7rem 1.7rem 1.8rem;
+  border-radius: 1.8rem;
   background-color: #5e42b0;
-}
-.apps-button:hover {
-  background-color: #af4fbf;
-  cursor: pointer;
-}
-.apps-button__row {
+  margin-bottom: 1.4rem;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
+}
+.apps-button:nth-last-child(-n+1) {
+  margin-bottom: 0;
+}
+.apps-button:hover {
+  background-color: #af4fbf;
+  cursor: pointer;
+  transition: 0.5s;
 }
 .apps-button__block {
   display: -webkit-flex;
@@ -119,80 +129,60 @@ html, body {
   width: 12rem;
 }
 .appl-button-logo {
-  padding-top: 0.4rem;
+  padding-top: 0.5rem;
+  padding-bottom: 0.7rem;
 }
 .goog-button-logo {
   padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
 }
-.app-button-logo-svg {
+.appl-button-logo-svg {
   height: 2.4rem;
+/*  width: 2rem;
+  padding-right: 0.2rem;*/
+}
+.goog-button-logo-svg {
+  height: 2.4rem;
+/*  width: 2.2rem;*/
 }
 .app-button-text-block{
   padding: 0.8rem 0 0.8rem 1rem;
-}
-.app-button-text-1st-line {
   color: #ffffff;
   font-size: 0.8rem;
   font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 0.04rem;
-  padding-bottom: 0.4rem;
 }
 .app-button-text-2nd-line {
+  display: block;
   color: #ffffff;
-  font-size: 0.8rem;
   font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.04rem;
+  padding-top: 0.4rem;
 }
 
+/*стили основной контентной области*/
 .main {
   background: #ffffff;
   color: #000000;
 }
-.person {
-  position: relative;
-}
+.person {}
 .person__title {
   display: block;
-  padding: 0 2rem;
+  padding: 1.7rem 2rem 1.3rem;
   color: #e7e7e7;
   font-size: 5rem;
   font-weight: 700;
   text-transform: uppercase;
-  text-shadow:  /*вариант обводки :) */
-    -0   -0.1rem 0   #B9B9B9,
-     0   -0.1rem 0   #B9B9B9,
-    -0    0.1rem 0   #B9B9B9,
-     0    0.1rem 0   #B9B9B9,
-    -0.1rem -0   0   #B9B9B9,
-     0.1rem -0   0   #B9B9B9,
-    -0.1rem  0   0   #B9B9B9,
-     0.1rem  0   0   #B9B9B9,
-    -0.1rem -0.1rem 0   #B9B9B9,
-     0.1rem -0.1rem 0   #B9B9B9,
-    -0.1rem  0.1rem 0   #B9B9B9,
-     0.1rem  0.1rem 0   #B9B9B9,
-    -0.1rem -0.1rem 0   #B9B9B9,
-     0.1rem -0.1rem 0   #B9B9B9,
-    -0.1rem  0.1rem 0   #B9B9B9,
-     0.1rem  0.1rem 0   #B9B9B9;
-}
-.person-margins {
-  padding-top: 1.7rem;
-  padding-bottom: 24rem;
 }
 .person__picture-block-foot {
-  position: absolute;
-  top: 8rem;
-  left: 7rem;
-  z-index: 3
+  padding-left: 7rem;
+  padding-right: 6rem;
+  margin-bottom: -5.5rem;
+  min-height: 7rem;
 }
 .person__picture-footballer{
   width: 19.2rem;
-}
-.person__picture-basketballer{
-  width: 30.2rem;
+  min-height: 10rem;
 }
 .person__point-1 {
   background-color: #fafafa;
@@ -207,13 +197,13 @@ html, body {
   flex-direction: row;
   padding-bottom: 2.5rem;
 }
-.person__presubtitle-block {
+/*.person__presubtitle-block {
   display: -webkit-flex;
   display: -moz-flex;
   display: -ms-flex;
   display: -o-flex;
   display: flex;
-}
+}*/
 .person__presubtitle {
   display: block;
   color: #000000;
@@ -221,6 +211,7 @@ html, body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.07rem;
+  padding-right: 1rem;
 }
 .person__presubtitle:after {
   content: "";
@@ -234,7 +225,6 @@ html, body {
 .person__presubtitle-inverse:after {
   background-color: #ffffff;
 }
-
 .person__subtitle {
   display: -webkit-flex;
   display: -moz-flex;
@@ -246,7 +236,7 @@ html, body {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.115rem;
-  padding-left: 1rem;
+/*  padding-left: 1rem;*/
 }
 .person__description {
   color: #000000;
@@ -270,11 +260,24 @@ html, body {
   color: #ffffff;
 }
 .person__picture-block-bask {
-  position: absolute;
-  top: 8rem;
-  right: 1rem;
-  z-index: 3
-  /*поигрался с разрешениями и думаю, что привязать его лучше к правому краю?*/
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: row;
+  -moz-flex-direction: row;
+  -ms-flex-direction: row;
+  -o-flex-direction: row;
+  flex-direction: row;
+  justify-content: flex-end;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-bottom: -2.4rem;
+  min-height: 5rem;
+}
+.person__picture-basketballer{
+  width: 30.2rem;
 }
 .person__presubtitle-inverse-players {
   color: #8765dd;
@@ -290,7 +293,8 @@ html, body {
 .actions__block {}
 /*эти картинки - не контентные, может быть убрать их в бэкграунд?*/
 .actions__pic {
-  width: 100vw;
+/*  min-width: 32rem; а нужен ли?*/
+  min-height: 10rem;
   position: relative;
 }
 .action__picture {
@@ -344,23 +348,6 @@ html, body {
   letter-spacing: 0.14rem;
   font-weight: 700;
   text-transform: uppercase;
-  text-shadow: 
-    -0   -0.1rem 0   #B9B9B9,
-     0   -0.1rem 0   #B9B9B9,
-    -0    0.1rem 0   #B9B9B9,
-     0    0.1rem 0   #B9B9B9,
-    -0.1rem -0   0   #B9B9B9,
-     0.1rem -0   0   #B9B9B9,
-    -0.1rem  0   0   #B9B9B9,
-     0.1rem  0   0   #B9B9B9,
-    -0.1rem -0.1rem 0   #B9B9B9,
-     0.1rem -0.1rem 0   #B9B9B9,
-    -0.1rem  0.1rem 0   #B9B9B9,
-     0.1rem  0.1rem 0   #B9B9B9,
-    -0.1rem -0.1rem 0   #B9B9B9,
-     0.1rem -0.1rem 0   #B9B9B9,
-    -0.1rem  0.1rem 0   #B9B9B9,
-     0.1rem  0.1rem 0   #B9B9B9;
 }
 .actions__title-margins {
   padding-bottom: 2.3rem;
@@ -413,6 +400,7 @@ html, body {
   width: 6rem;
 }
 .footer__subtitle-box {
+  display: block;
   padding: 5.5rem 0 7.6rem;
   margin: 0 auto;
 }
@@ -437,4 +425,92 @@ html, body {
 }
 .footer__text-logo {
   padding-top: 8.2rem;
+}
+/*медиазапрос для планшетов*/
+@media (min-width: 768px) and (max-width: 1919px) {
+  html, body {
+    font-size: 1.3020833vmin;
+  }
+  .header {
+    background: url(../img/football_1280.jpg);
+    padding: 4rem 6rem 9rem;
+  }
+  .text_logo {
+    width: 20.5rem;
+  }
+  .header__subtitle-box {
+    padding: 18.72rem 0 30.2rem;
+  }
+  .header__subtitle_1st-line {
+    font-size: 6.4rem;
+/*  line-height: 3.132rem авокод ошибается?*/;
+    letter-spacing: 0.352rem;
+  }
+  .header__subtitle_2nd-line {
+    font-size: 6.4rem;
+    line-height: normal /* 3.132rem ошибка в выдаче авкодом?*/;
+    letter-spacing: 0.352rem;
+    padding: 2.5rem 0 0 10.5rem;
+  }
+  .button-block{
+  flex-direction: row;
+  justify-content: space-between;
+  }
+  .apps-button {
+    display: flex;
+    border-radius: 1.7rem 1.7rem 1.8rem;
+    box-shadow: 0.8rem 1.4rem 2.4rem #0a0e34;
+    background-color: #5e42b0;
+    min-width: 31.1rem;
+  }
+.apps-button:hover {
+  background-color: #af4fbf;
+  cursor: pointer;
+}
+.apps-button__row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.apps-button__block {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 21rem;
+}
+.appl-button-logo {
+  padding-top: 0.4rem;
+  padding-bottom: 0.8rem;
+}
+.goog-button-logo {
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+.app-button-logo-svg {
+  height: 2.4rem;
+}
+.app-button-text-block{
+  padding: 0.8rem 0 0.8rem 1rem;
+}
+.app-button-text-1st-line {
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.04rem;
+  padding-bottom: 0.4rem;
+}
+.app-button-text-2nd-line {
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04rem;
+}
+
 }
