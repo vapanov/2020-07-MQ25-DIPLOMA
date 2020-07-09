@@ -36,11 +36,11 @@ html, body {
 /*начало хедера*/
 
 .header {
-	color: #ffffff;
-	background: url(../img/football_767.jpg) #0f1133;
-	background-repeat: no-repeat;
-	background-position: center center;
-	background-size: cover;
+  color: #ffffff;
+  background: url(../img/football_767.jpg) #0f1133;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   position: relative;
   z-index: 0;
   padding: 3.3rem 2rem 6.8rem;
@@ -340,7 +340,7 @@ html, body {
   color: #ffffff;
   background: url(../img/game_767.jpg) #0f1133;
   background-repeat: no-repeat;
-  background-position: center center;
+  background-position: center;
   background-size: cover;
   position: relative;
   z-index: 0;
@@ -411,12 +411,13 @@ html, body {
     font-size: 1.3020833vmin;
   }
 
+/*нужно перепроверить бэки у хедера и футера*/
+
 /*начало хедера*/
 
   .header {
     background: url(../img/football_1280.jpg);
     padding: 4rem 4.3rem 6rem;
-    background-position: center; /* перепроверить! */
   }
   .text_logo {
     width: 20.5rem;
