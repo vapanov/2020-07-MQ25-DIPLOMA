@@ -167,13 +167,13 @@ html, body {
     display: block;
     padding-left: 7rem;
     padding-right: 6rem;
-    margin-bottom: -5.5rem;
   }
   .person__picture-footballer{
     width: 19.2rem;
     min-height: 10rem;
   }
   .person__point-1 {
+    margin-top: -5.5rem;
     background-color: #fafafa;
     padding: 7.8rem 2rem 5.1rem;
   }
