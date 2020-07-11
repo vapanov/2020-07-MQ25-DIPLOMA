@@ -14,7 +14,10 @@ html, body {
   background-color: #ffffff;
   font-family: Open Sans, arial, sans-serif;
   font-size: 3.125vmin;
-/*  font-size: calc( (100vw - Vmin)/(Vmax - Vmin) * (Fmax - Fmin) + Fmin);
+
+/*нашёл формулу высчитывания потребного fz в зависимости от актуального вьюпорта между разывами. крутил-вертел, не понял, зачем. удалить или всёж применить?
+
+    font-size: calc( (100vw - Vmin)/(Vmax - Vmin) * (Fmax - Fmin) + Fmin);
     font-size: calc( (100vw - 480px)/(1280 - 480) * (24 - 16) + 16px);*/
 }
 .visually-hidden {
@@ -838,81 +841,82 @@ html, body {
 
   /*начало экшнс*/
 
-  .actions {}
-  .actions__block {
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flex;
-    display: -o-flex;
-    display: flex;
-    justify-content: center;
-    -ms-align-items: flex-start;
-    align-items: flex-start;
-    position: relative;
-  }
-  .actions__block:nth-child(even) {
-    -webkit-flex-direction: row;
-    -moz-flex-direction: row;
-    -ms-flex-direction: row;
-    -o-flex-direction: row;
-    flex-direction: row;
-  }
-  .actions__block:nth-child(even) {
-    -webkit-flex-direction: row-reverse;
-    -moz-flex-direction: row-reverse;
-    -ms-flex-direction: row-reverse;
-    -o-flex-direction: row-reverse;
-    flex-direction: row-reverse;
-  }
-  .actions__pic {
-    position: static;
-  }
-  .action__picture {
-    width: 96rem;
-    height: 73rem;
-    object-fit: cover;
-  }
-  .actions__num-block {
-    width: 16.8rem;
-    height: 15.5rem;
-    bottom: calc((73rem / 2) - (15.5rem / 2));
-    left: calc(96rem - (16.8rem / 2));
-  }
-  .actions__num {
-    color: #f5f6f7;
-    font-size: 2.4rem;
-    letter-spacing: 0.12rem;
-  }
-  .actions__num:after {
-    content: "";
-    margin-top: 0.7rem;
-    opacity: 0.3;
-    width: 2.6rem;
-    height: 0.5rem;
-    border-radius: 0.2rem;
-  }
-  .actions__desc {
-    width: 50%;
-  }
-  .actions__desc-right {
-    padding: 24.5rem 19rem 10rem 12.5rem;
-  }
-  .actions__desc-left {
-    padding: 24.5rem 12.5rem 10rem 19rem;
-  }
-  .actions__title {
-    display: block;
-    color: #e7e7e7;
-    font-size: 8rem;
-  }
-  .actions__title-margins {
-    padding-bottom: 6.1rem;
-  }
-  .actions__desc-text {
-    font-size: 2.4rem;
-    line-height: 2.8rem;
-    letter-spacing: 0.12rem;
-  }
+    .actions {}
+    .actions__block {
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
+      justify-content: center;
+      -ms-align-items: flex-start;
+      align-items: flex-start;
+      position: relative;
+    }
+    .actions__block:nth-child(even) {
+      -webkit-flex-direction: row;
+      -moz-flex-direction: row;
+      -ms-flex-direction: row;
+      -o-flex-direction: row;
+      flex-direction: row;
+    }
+    .actions__block:nth-child(even) {
+      -webkit-flex-direction: row-reverse;
+      -moz-flex-direction: row-reverse;
+      -ms-flex-direction: row-reverse;
+      -o-flex-direction: row-reverse;
+      flex-direction: row-reverse;
+    }
+    .actions__pic {
+      position: static;
+    }
+    .action__picture {
+      width: 96rem;
+      height: 73rem;
+      object-fit: cover;
+    }
+    .actions__num-block {
+      width: 16.8rem;
+      height: 15.5rem;
+      bottom: calc((73rem / 2) - (15.5rem / 2));
+      left: calc(96rem - (16.8rem / 2));
+    }
+    .actions__num {
+      color: #f5f6f7;
+      font-size: 2.4rem;
+      letter-spacing: 0.12rem;
+    }
+    .actions__num:after {
+      content: "";
+      margin-top: 0.7rem;
+      opacity: 0.3;
+      width: 2.6rem;
+      height: 0.5rem;
+      border-radius: 0.2rem;
+    }
+    .actions__desc {
+      width: 50%;
+    }
+    .actions__desc-right {
+      padding: 24.5rem 19rem 10rem 12.5rem;
+    }
+    .actions__desc-left {
+      padding: 24.5rem 12.5rem 10rem 19rem;
+    }
+    .actions__title {
+      display: block;
+      color: #e7e7e7;
+      font-size: 8rem;
+    }
+    .actions__title-margins {
+      padding-bottom: 6.1rem;
+    }
+    .actions__desc-text {
+      font-size: 2.4rem;
+      line-height: 2.8rem;
+      letter-spacing: 0.12rem;
+    }
+  /*конец экшнс*/
 
   /*конец основной области*/
 
