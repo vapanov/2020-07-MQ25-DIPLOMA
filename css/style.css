@@ -878,7 +878,8 @@ html, body {
     .actions__num-block {
       width: 16.8rem;
       height: 15.5rem;
-      bottom: calc((73rem / 2) - (15.5rem / 2));
+      bottom: unset;
+      top: 21rem;
       left: calc(96rem - (16.8rem / 2));
     }
     .actions__num {
