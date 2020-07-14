@@ -11,6 +11,7 @@
   font-style: normal;
 }
 html, body {
+  height: 100%;
   background-color: #ffffff;
   font-family: Open Sans, arial, sans-serif;
   font-size: 3.125vmin;
@@ -47,6 +48,7 @@ html, body {
     position: relative;
     z-index: 0;
     padding: 3.3rem 2rem 6.8rem;
+    min-height: 100vh;
   }
   .header:after {
     content: "";
@@ -166,16 +168,20 @@ html, body {
     font-weight: 700;
     text-transform: uppercase;
   }
-  .person__picture-block-foot {
+
+
+  .person__picture-block-footballer {
     display: block;
+    width: 32.2rem;
+    min-height: 10rem;
     padding-left: 7rem;
     padding-right: 6rem;
-    margin-bottom: -5.5rem;
+    margin: 0 auto -5.5rem 0;
   }
   .person__picture-footballer{
-    width: 19.2rem;
-    min-height: 10rem;
+    width: 100%;
   }
+
   .person__point-1 {
     background-color: #fafafa;
     padding: 7.8rem 2rem 5.1rem;
@@ -246,16 +252,18 @@ html, body {
 
   /*начало картинки баскетболист*/
 
-  .person__picture-block-bask {
+  .person__picture-block-basketballer {
     display: block;
+    width: 32.2rem;
+    min-height: 10rem;
     padding-left: 1rem;
     padding-right: 1rem;
     margin: -0.2rem 0 -2.4rem auto;
   }
   .person__picture-basketballer{
-    width: 30.2rem;
-    min-height: 5rem;
+    width: 100%;
   }
+
   .person__presubtitle-inverse-players {
     color: #8765dd;
   }
@@ -266,7 +274,6 @@ html, body {
     padding: 5.7rem 2rem 5.1rem;
     background-color: #090c35;
   }
-  .actions {}
   .actions__block {}
   .actions__pic {
     min-height: 10rem;
@@ -382,7 +389,7 @@ html, body {
   }
   .footer__title {
     display: block;
-    text-align: center;
+/*    text-align: center;*/
     color: #ffffff;
     font-size: 3.2rem;
     font-weight: 700;
@@ -405,7 +412,7 @@ html, body {
 /*конец футера*/
 
 /*медиазапрос для планшетов */
-@media (min-width: 768px) and (max-width: 1919px) {
+@media (min-width: 641px) and (max-width: 960px) {
   html, body {
     font-size: 1.3020833vmin;
   }
@@ -496,11 +503,14 @@ html, body {
     .person__title-right {
       padding: 7.2rem 4rem 0.9rem 29rem;
     }
-    .person__picture-block-foot {
+    .person__picture-block-footballer {
       padding: 0;
       margin: 0;
-    }
+      min-height: 0;
+      }
     .person__picture-footballer{
+      padding: 0;
+      margin: 0;
       width: 49.7rem;
       position: absolute;
       top: 9.4rem;
@@ -553,11 +563,14 @@ html, body {
     .person__title-left {
       padding: 7rem 45rem 0.9rem 2.5rem;
     }
-    .person__picture-block-bask {
-      padding: 0;
+    .person__picture-block-basketballer {
       margin: 0;
+      padding: 0;
+      min-height: 0;
     }
     .person__picture-basketballer{
+      padding: 0;
+      margin: 0;
       width: 43.6rem;
       position: absolute;
       top: 3.9rem;
@@ -576,7 +589,6 @@ html, body {
 
   /*начало экшнс*/
 
-  .actions {}
   .actions__block {}
   .actions__pic {
     min-height: 15rem;
@@ -659,7 +671,7 @@ html, body {
 
 
 /*медиазапрос для десктопов ;*/
-@media (min-width: 1920px) {
+@media (min-width: 961px) {
   html, body {
     font-size: 0.5208333vw;
   }
@@ -753,9 +765,16 @@ html, body {
     .person__title-right {
       padding: 10rem 20rem 3.8rem 100.7rem;
     }
-    .person__picture-block-foot {
-      padding: 0;
+    .person__picture-block-footballer {
       margin: 0;
+      padding: 0;
+      min-height: 0;
+    }
+    .person__picture-block-footballer {
+      margin: 0;
+      padding: 0;
+      width: 0;
+      height: 0;
     }
     .person__picture-footballer{
       width: 56.6rem;
@@ -813,11 +832,20 @@ html, body {
     .person__title-left {
       padding: 10rem 111rem 3.8rem 19rem;
     }
-    .person__picture-block-bask {
-      padding: 0;
+    .person__picture-block-basketballer {
       margin: 0;
+      padding: 0;
+      min-height: 0;
+    }
+    .person__picture-block-basketballer {
+      margin: 0;
+      padding: 0;
+      width: 0;
+      height: 0;
     }
     .person__picture-basketballer{
+      padding: 0;
+      margin: 0;
       position: absolute;
       width: 99.1rem;
       top: 2.1rem;
@@ -841,7 +869,6 @@ html, body {
 
   /*начало экшнс*/
 
-    .actions {}
     .actions__block {
       display: -webkit-flex;
       display: -moz-flex;
@@ -869,11 +896,22 @@ html, body {
     }
     .actions__pic {
       position: static;
+      width: 50%;
+      height: 100%;
+      min-height: 73rem;
+      overflow: hidden;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flex;
+      display: -o-flex;
+      display: flex;
     }
     .action__picture {
-      width: 96rem;
-      height: 73rem;
+      width: 100%;
+      height: 100%;
       object-fit: cover;
+/*      width: 96rem;*/
+/*      height: 73rem;*/
     }
     .actions__num-block {
       width: 16.8rem;
