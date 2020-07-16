@@ -417,7 +417,7 @@ html, body {
     -ms-flex-direction: column;
     -o-flex-direction: column;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-start;
     flex: 1 1 auto;
   }
   .footer__logo-icon-box {
@@ -441,7 +441,8 @@ html, body {
   }
   .footer__subtitle-box {
 /*    padding: 5.3rem 0 7.3rem;*/
-    padding: 9.33vh 0 12.8521vh;
+/*    padding: 9.33vh 0 12.8521vh;*/
+    padding: 9.33vh 0 1rem;
     margin: 0 auto;
     display: -webkit-flex;
     display: -moz-flex;
@@ -801,7 +802,7 @@ html, body {
     }
   /*конец футера*/
 
-    @media /*(min-width: 641px) and (max-width: 960px) and*/ (orientation: landscape) {
+    @media (orientation: landscape) {
       .header__subtitle-box {
         padding: 3rem 4.2rem 3rem;
       }
