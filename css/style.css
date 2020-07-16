@@ -801,13 +801,24 @@ html, body {
     }
   /*конец футера*/
 
-    @media (orientation: landscape) {
+    @media /*(min-width: 641px) and (max-width: 960px) and*/ (orientation: landscape) {
       .header__subtitle-box {
         padding: 3rem 4.2rem 3rem;
       }
+      /*ограничил фотографии по высоте, 
+      чтобы в ландшафте не тренировать большой палец*/
+      .action__picture {
+        max-height: 75vh;
+        object-fit: cover;
+      }
+      .footer__subtitle-box {
+        padding: 1rem 0;
+      }
+      .footer__text-logo {
+        padding-top: 0;
+      }
     }
 }
-
 /*Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio error maxime ipsum, distinctio, ex ea iure quos dolorem nisi dignissimos dolores ab officiis totam sapiente dicta. Ipsum, id expedita. Quisquam.*/
 
 /*медиазапрос для десктопов ;*/
