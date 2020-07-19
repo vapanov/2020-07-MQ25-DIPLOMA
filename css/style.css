@@ -32,6 +32,8 @@ html, body {
 	overflow: hidden;
   display: flex;
 	flex-direction: column;
+  max-width: 1920px;
+  margin: 0 auto;
 }
 .content {
   flex: 1 1 auto;
@@ -827,6 +829,11 @@ html, body {
 @media (min-width: 961px) /*and (pointer: fine)*/ {
   html, body {
     font-size: 0.5208333vw;
+  }
+  @media (min-width: 1921px) {
+    html, body {
+      font-size: 10px;
+    }
   }
 
   /*начало хедера*/
