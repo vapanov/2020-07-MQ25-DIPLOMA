@@ -1,0 +1,1292 @@
+/*Обнуление*/
+* {
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+:focus,
+:active {
+  outline: none;
+}
+a:focus,
+a:active {
+  outline: none;
+}
+
+nav,
+footer,
+header,
+aside {
+  display: block;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  font-size: 100%;
+  line-height: 1;
+  font-size: 14px;
+  -ms-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+input,
+button,
+textarea {
+  font-family: inherit;
+}
+
+input::-ms-clear {
+  display: none;
+}
+button {
+  cursor: pointer;
+}
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+a,
+a:visited {
+  text-decoration: none;
+}
+a:hover {
+  text-decoration: none;
+}
+ul li {
+  list-style: none;
+}
+img {
+  vertical-align: top;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+}
+/*--------------------*/
+
+@font-face {
+  font-family: Open Sans;
+  src: url(../fonts/OpenSans-Regular.woff);
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: Open Sans;
+  src: url(../fonts/OpenSans-Bold.woff);
+  font-weight: 700;
+  font-style: normal;
+}
+html,
+body {
+  height: 100%;
+  background-color: #ffffff;
+  font-family: Open Sans, arial, sans-serif;
+  font-size: 3.125vmin;
+
+  /*нашёл формулу высчитывания потребного fz в зависимости от актуального вьюпорта между разывами. крутил-вертел, не понял, зачем. удалить или всёж применить?
+
+    font-size: calc( (100vw - Vmin)/(Vmax - Vmin) * (Fmax - Fmin) + Fmin);
+    font-size: calc( (100vw - 480px)/(1280 - 480) * (24 - 16) + 16px);*/
+}
+.visually-hidden {
+  width: 1px;
+  height: 1px;
+  clip: rect(1px, 1px, 1px, 1px);
+  position: absolute;
+}
+.wrapper {
+  min-height: 100vh;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  max-width: 1920px;
+  margin: 0 auto;
+}
+.content {
+  flex: 1 1 auto;
+}
+
+/*начало хедера*/
+
+.header {
+  color: #ffffff;
+  background: url(../img/football_767.jpg) #0f1133;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+  /*    padding: 3.3rem 2rem 6.8rem;*/
+  padding: 5.81vh 2rem 12.147887vh;
+  min-height: 100vh;
+  max-height: 100vh;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+.header:after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #0f1133;
+  opacity: 0.9;
+}
+.header__container {
+  position: relative;
+  z-index: 2;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  min-height: 100%;
+}
+.text_logo {
+  display: block;
+  width: 13.3rem;
+  margin: 0 auto;
+}
+.header__text-logo {
+}
+.logo-img {
+  width: 100%;
+}
+.header__subtitle-box {
+  /*    padding: 12.8rem 0 8.6rem;*/
+  /*    padding: 22.5352vh 0 15.14vh;*/
+  padding-top: 22.5352vh;
+  margin-bottom: auto;
+}
+.header__subtitle_1st-line {
+  text-transform: uppercase;
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 2.8rem;
+  line-height: normal;
+  letter-spacing: 0.154rem;
+}
+.header__subtitle_2nd-line {
+  display: block;
+  text-transform: uppercase;
+  color: #ffffff;
+  padding: 1rem 0 0 4.1rem;
+}
+.button-block {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.apps-button {
+  display: block;
+  border-radius: 1.8rem;
+  background-color: #5e42b0;
+  margin-bottom: 2.64vh;
+  /*margin-bottom: 1.4rem;*/
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+.apps-button:hover {
+  background-color: #af4fbf;
+  cursor: pointer;
+  transition: 0.3s;
+}
+.apps-button__block {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  width: 12rem;
+}
+.appl-button-logo {
+  padding-top: 0.5rem;
+  padding-bottom: 0.7rem;
+}
+.goog-button-logo {
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+.appl-button-logo-svg {
+  height: 2.4rem;
+}
+.goog-button-logo-svg {
+  height: 2.4rem;
+}
+.app-button-text-block {
+  padding: 0.8rem 0 0.8rem 1rem;
+  color: #ffffff;
+  font-size: 0.8rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.04rem;
+}
+.app-button-text-2nd-line {
+  display: block;
+  color: #ffffff;
+  font-weight: 700;
+  padding-top: 0.4rem;
+}
+/*конец хедера*/
+/*начало стилей основной контентной области*/
+
+.main {
+  background: #ffffff;
+  color: #000000;
+}
+.person {
+}
+.person__title {
+  display: block;
+  padding: 1.7rem 2rem 1.3rem;
+  color: #e7e7e7;
+  font-size: 5rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.person__picture-block-footballer {
+  display: block;
+  width: 32.2rem;
+  min-height: 10rem;
+  padding-left: 7rem;
+  padding-right: 6rem;
+  margin: 0 auto -5.5rem 0;
+}
+.person__picture-footballer {
+  width: 100%;
+}
+
+.person__point-1 {
+  background-color: #fafafa;
+  padding: 7.8rem 2rem 5.1rem;
+}
+.person_title-block {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 2.5rem;
+}
+.person__presubtitle {
+  display: block;
+  color: #000000;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07rem;
+  padding-right: 1rem;
+}
+.person__presubtitle:after {
+  content: '';
+  display: block;
+  margin: 0 auto 0;
+  width: 1.5rem;
+  height: 0.4rem;
+  border-radius: 0.2rem;
+  background-color: #5e42b0;
+}
+.person__presubtitle-inverse:after {
+  background-color: #ffffff;
+}
+.person__subtitle {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  color: #c1c1c1;
+  font-size: 2.3rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.115rem;
+}
+.person__description {
+  color: #000000;
+  font-size: 1.5rem;
+  font-weight: 400;
+  line-height: 1.8rem;
+  letter-spacing: 0.075rem;
+}
+.person__point-2 {
+  padding: 5.7rem 2rem 5.1rem;
+  background-color: #f5f4f9;
+}
+.person__point-3-athletes {
+  padding: 5.7rem 2rem 5.1rem;
+  background-color: #5e42b0;
+}
+.person__presubtitle-inverse {
+  color: #000000;
+}
+.person__description-inverse-at {
+  color: #ffffff;
+}
+
+/*начало картинки баскетболист*/
+
+.person__picture-block-basketballer {
+  display: block;
+  width: 32.2rem;
+  min-height: 10rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin: -0.2rem 0 -2.4rem auto;
+}
+.person__picture-basketballer {
+  width: 100%;
+}
+
+.person__presubtitle-inverse-players {
+  color: #8765dd;
+}
+.person__presubtitle-inverse-players:after {
+  background-color: #ffffff;
+}
+.person__point-3-players {
+  padding: 5.7rem 2rem 5.1rem;
+  background-color: #090c35;
+}
+.actions__block {
+}
+.actions__pic {
+  min-height: 10rem;
+  position: relative;
+}
+.action__picture {
+  width: 100%;
+}
+
+.actions__num-block {
+  position: absolute;
+  z-index: 3;
+  width: 7rem;
+  height: 7rem;
+  bottom: calc((7rem / 5) * -1);
+  left: 2rem;
+  background-color: #5e42b0;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  justify-content: center;
+  -ms-align-items: center;
+  align-items: center;
+}
+.actions__num {
+  display: block;
+  color: #f5f6f7;
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07rem;
+}
+.actions__num:after {
+  content: '';
+  display: block;
+  margin: 0 auto 0;
+  background-color: #ffffff;
+  opacity: 0.3;
+  width: 1.5rem;
+  height: 0.4rem;
+  border-radius: 0.2rem;
+}
+.actions__desc {
+  width: 100%;
+  padding: 2.8rem 2rem 7.5rem;
+}
+.actions__title {
+  display: block;
+  color: #e7e7e7;
+  font-size: 2.8rem;
+  letter-spacing: 0.14rem;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+.actions__title-margins {
+  padding-bottom: 2.3rem;
+}
+.actions__desc-text {
+  color: #000000;
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 2rem;
+  letter-spacing: 0.08rem;
+}
+/*конец основной контентной области*/
+/*начало футера*/
+
+.footer {
+  color: #ffffff;
+  background: url(../img/game_767.jpg) #0f1133;
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+  position: relative;
+  z-index: 0;
+  /*    padding: 9.8rem 2rem 1rem;*/
+  padding: 17.2535vh 2rem 1.76vh;
+  min-height: 100vh;
+  max-height: 100vh;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+}
+.footer:after {
+  content: '';
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  background-color: #0f1133;
+  opacity: 0.9;
+}
+.footer__title-box {
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 1 1 auto;
+}
+.footer__logo-icon-box {
+  box-sizing: border-box;
+  width: 7.2rem;
+  height: 7.4rem;
+  margin: 0 auto;
+  border-radius: 1.7rem 1.7rem 1.8rem;
+  background: rgb(119, 85, 215); /* Old browsers */
+  background: -moz-linear-gradient(
+    top,
+    rgba(119, 85, 215, 1) 0%,
+    rgba(80, 55, 154, 1) 100%
+  ); /* FF3.6-15 */
+  background: -webkit-linear-gradient(
+    top,
+    rgba(119, 85, 215, 1) 0%,
+    rgba(80, 55, 154, 1) 100%
+  ); /* Chrome10-25,Safari5.1-6 */
+  background: linear-gradient(
+    to bottom,
+    rgba(119, 85, 215, 1) 0%,
+    rgba(80, 55, 154, 1) 100%
+  ); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#7755d7', endColorstr='#50379a',GradientType=0 ); /* IE6-9 */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /*flex-grow: 0;*/
+}
+.footer__logo-icon {
+  width: 6rem;
+}
+.footer__subtitle-box {
+  /*    padding: 5.3rem 0 7.3rem;*/
+  /*    padding: 9.33vh 0 12.8521vh;*/
+  padding: 9.33vh 0 1rem;
+  margin: 0 auto;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flex;
+  display: -o-flex;
+  display: flex;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  -o-flex-direction: column;
+  flex-direction: column;
+  justify-content: center;
+}
+.footer__title {
+  display: block;
+  text-align: center;
+  color: #ffffff;
+  font-size: 3.2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1rem;
+  padding-bottom: 1rem;
+}
+.footer__subtitle {
+  display: block;
+  text-align: center;
+  color: #9b8ec1;
+  font-size: 1.4rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.07rem;
+}
+.footer__text-logo {
+  padding-top: 6.8rem;
+  /*попробовал пределать здесь на vh, но это привело 
+    к появлению кусочка лого на 4айфоне, а не всего лого. 
+    чтобы показывать всё, нужно радикально менять отступы - 
+    делать на флексах (?)*/
+}
+@media (orientation: landscape) and (max-width: 640px) {
+  .header__subtitle-box {
+    padding: 1.5rem 0 1.5rem;
+  }
+  /*ограничил фотографии по высоте, 
+      чтобы в ландшафте не тренировать большой палец*/
+  .action__picture {
+    max-height: 75vh;
+    object-fit: cover;
+  }
+
+  .footer {
+    padding-top: 1.5vh;
+    padding-bottom: 1.5vh;
+  }
+  .footer__subtitle-box {
+    padding: 1rem 0;
+  }
+  .footer__text-logo {
+    padding-top: 0;
+  }
+}
+/*конец футера*/
+
+/*Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio error maxime ipsum, distinctio, ex ea iure quos dolorem nisi dignissimos dolores ab officiis totam sapiente dicta. Ipsum, id expedita. Quisquam.*/
+
+/*медиазапрос для планшетов */
+
+/*@media (min-width: 641px) and (pointer: coarse) { или мах 1366*/
+
+@media (min-width: 641px) and (max-width: 960px) {
+  html,
+  body {
+    font-size: 1.3020833vmin;
+  }
+
+  /*начало хедера*/
+
+  .header {
+    background: url(../img/football_1280.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    padding: 4rem 4.3rem 6rem;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+  }
+  .text_logo {
+    width: 20.5rem;
+  }
+  .header__text-logo {
+  }
+  .header__subtitle-box {
+    padding: 16.7rem 4.2rem 15rem;
+    margin-bottom: auto;
+  }
+  .header__subtitle_1st-line {
+    font-size: 6.4rem;
+    line-height: 7.5rem;
+    letter-spacing: 0.32rem;
+  }
+  .header__subtitle_2nd-line {
+    padding: 0rem 0 0 10.5rem;
+  }
+  .button-block {
+    flex-direction: row;
+    justify-content: center;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-align-items: flex-start;
+    align-items: flex-start;
+  }
+  .apps-button {
+    display: flex;
+    border-radius: 5rem;
+    box-shadow: 0.8rem 1.4rem 2.4rem #0a0e34;
+    background-color: #5e42b0;
+    min-width: 31.1rem;
+    margin: 0 1.5rem 3rem;
+  }
+  .apps-button__block {
+    min-width: 22rem;
+  }
+  .appl-button-logo {
+    padding-top: 1.6rem;
+    padding-bottom: 1.9rem;
+  }
+  .goog-button-logo {
+    padding-top: 1.7rem;
+    padding-bottom: 1.5rem;
+  }
+  .appl-button-logo-svg {
+    height: 4.2rem;
+  }
+  .goog-button-logo-svg {
+    height: 4.5rem;
+  }
+  .app-button-text-block {
+    padding: 2.3rem 0 0 2.3rem;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.07rem;
+  }
+  .app-button-text-2nd-line {
+    display: block;
+    font-weight: 700;
+    padding-top: 0.4rem;
+  }
+  /*конец хедера*/
+
+  /*начало основной области*/
+
+  /*начало футболиста*/
+  .person {
+    position: relative;
+  }
+  .person__title {
+    font-size: 8rem;
+  }
+  .person__title-right {
+    padding: 7.2rem 4rem 0.9rem 29rem;
+  }
+  .person__picture-block-footballer {
+    padding: 0;
+    margin: 0;
+    min-height: 0;
+  }
+  .person__picture-footballer {
+    padding: 0;
+    margin: 0;
+    width: 49.7rem;
+    position: absolute;
+    top: 9.4rem;
+    left: -16.3rem;
+  }
+  .person__point-1 {
+    background-color: #ffffff;
+  }
+  .person__block-paddings-right {
+    padding: 3.7rem 4rem 3.3rem 29rem;
+  }
+  .person_title-block {
+    padding-bottom: 2rem;
+  }
+  .person__presubtitle {
+    font-size: 1.8rem;
+    letter-spacing: 0.09rem;
+    padding-right: 1.5rem;
+    line-height: 1;
+  }
+  .person__presubtitle:after {
+    width: 2.1rem;
+    height: 0.5rem;
+    margin-top: 0.3rem;
+    border-radius: 0.2rem;
+  }
+  .person__presubtitle-inverse {
+    color: #0a0e34;
+  }
+  .person__presubtitle-inverse:after {
+    margin-top: 0.3rem;
+    background-color: #efefef;
+  }
+  .person__subtitle {
+    font-size: 3.2rem;
+    letter-spacing: 0.16rem;
+  }
+  .person__description {
+    color: #000000;
+    font-size: 1.6rem;
+    line-height: 2.8rem;
+    letter-spacing: 0.08rem;
+  }
+  .person__description-inverse-at {
+    color: #ffffff;
+  }
+  /*конец футболиста*/
+
+  /*начало баскетболиста*/
+  .person__title-left {
+    padding: 7rem 45rem 0.9rem 2.5rem;
+  }
+  .person__picture-block-basketballer {
+    margin: 0;
+    padding: 0;
+    min-height: 0;
+  }
+  .person__picture-basketballer {
+    padding: 0;
+    margin: 0;
+    width: 43.6rem;
+    position: absolute;
+    top: 3.9rem;
+    right: 0;
+  }
+  .person__block-paddings-left {
+    padding: 4rem 30rem 3.2rem 2.5rem;
+  }
+  .person_title-block-1-players {
+    padding-right: 15rem;
+  }
+  .person__presubtitle-inverse-players:after {
+    background-color: #ffffff;
+  }
+  /*конец баскетболиста*/
+
+  /*начало экшнс*/
+
+  .actions__block {
+  }
+  .actions__pic {
+    min-height: 15rem;
+    position: relative;
+  }
+  .action__picture {
+    width: 100%;
+  }
+
+  .actions__num-block {
+    width: 11.6rem;
+    height: 11.6rem;
+    bottom: calc((11.6rem / 5) * -1);
+    left: 3.3rem;
+  }
+  .actions__num {
+    color: #f5f6f7;
+    font-size: 2.4rem;
+    letter-spacing: 0.12rem;
+  }
+  .actions__num:after {
+    margin-top: 0.7rem;
+    opacity: 0.3;
+    width: 2.5rem;
+    height: 0.5rem;
+    border-radius: 0.2rem;
+  }
+  .actions__desc {
+    width: 100%;
+    padding: 7.6rem 7rem 9.9rem 3.3rem;
+  }
+  .actions__title {
+    display: block;
+    color: #e7e7e7;
+    font-size: 8rem;
+  }
+  .actions__title-margins {
+    padding-bottom: 2.2rem;
+  }
+  .actions__desc-text {
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    letter-spacing: 0.12rem;
+  }
+
+  /*конец основной области*/
+
+  /*начало футера*/
+
+  .footer {
+    background: url(../img/game_1280.jpg) #0f1133;
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    /*padding: 12.5vh 3.3rem 2.4rem; задел на ландшафт*/
+    padding: 12.6rem 3.3rem 2.4rem;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+  }
+  .footer__title-box {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    padding-bottom: 1rem;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    -ms-flex-direction: column;
+    -o-flex-direction: column;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+  .footer__logo-icon-box {
+    width: 13rem;
+    height: 13.7rem;
+    margin-bottom: 6vh;
+  }
+  .footer__logo-icon {
+    width: 10.3rem;
+  }
+  .footer__subtitle-box {
+    /*padding: 8rem 0 28rem;*/
+    padding: 0.8342vh 0 2.9197vh;
+  }
+  .footer__title {
+    font-size: 8rem;
+    letter-spacing: 0.3rem; /*в авокоде 0.485*/
+    padding-bottom: 1.7rem;
+    text-align: center;
+  }
+  .footer__subtitle {
+    font-size: 3.6rem;
+  }
+  .footer__button-block {
+    margin-top: auto;
+  }
+  .footer__text-logo {
+    padding-top: 2.5rem;
+  }
+  /*конец футера*/
+
+  @media (orientation: landscape) {
+    .header__subtitle-box {
+      padding: 3rem 4.2rem 3rem;
+      margin-top: auto;
+    }
+    /*ограничил фотографии по высоте, 
+      чтобы в ландшафте не тренировать большой палец*/
+    .action__picture {
+      max-height: 75vh;
+      object-fit: cover;
+    }
+    .footer__subtitle-box {
+      padding: 1rem 0;
+    }
+    .footer__text-logo {
+      padding-top: 0;
+    }
+  }
+}
+/*Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odio error maxime ipsum, distinctio, ex ea iure quos dolorem nisi dignissimos dolores ab officiis totam sapiente dicta. Ipsum, id expedita. Quisquam.*/
+
+/*медиазапрос для десктопов ;*/
+@media (min-width: 961px) /*and (pointer: fine) */ {
+  html,
+  body {
+    font-size: 0.5208333vw;
+  }
+  @media (min-width: 1921px) {
+    html,
+    body {
+      font-size: 10px;
+    }
+  }
+
+  /*начало хедера*/
+
+  .header {
+    background: url(../img/football_1920.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+    background-size: cover;
+    padding: 4.5rem 18.1rem 5.9rem;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+  }
+  .text_logo {
+    width: 19.1rem;
+  }
+  .header__text-logo {
+    /*flex-grow: 2;*/
+  }
+  .header__subtitle-box {
+    /*      padding: 27.2rem 0rem 20.6rem;*/
+    padding: 8.2rem 0rem 1rem;
+    margin-top: auto;
+    margin-bottom: auto;
+  }
+  .header__subtitle_1st-line {
+    font-size: 9rem;
+    line-height: 10rem;
+    letter-spacing: 0.45rem;
+  }
+  .header__subtitle_2nd-line {
+    padding: 0rem 0 0 45rem;
+  }
+  .button-block {
+    flex-direction: row;
+    justify-content: center;
+    -webkit-flex-wrap: wrap;
+    -moz-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    -o-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -ms-align-items: flex-start;
+    align-items: flex-start;
+  }
+  .apps-button {
+    display: flex;
+    border-radius: 5rem;
+    box-shadow: 0.8rem 1.4rem 2.4rem #0a0e34;
+    background-color: #5e42b0;
+    min-width: 31.1rem;
+    margin: 0 2.5rem 5rem;
+  }
+  .apps-button__block {
+    min-width: 22rem;
+  }
+  .appl-button-logo {
+    padding-top: 1.2rem;
+    padding-bottom: 1.7rem;
+  }
+  .goog-button-logo {
+    padding-top: 1.4rem;
+    padding-bottom: 1.3rem;
+  }
+  .appl-button-logo-svg {
+    width: 4.2rem;
+    height: 4.8rem;
+  }
+  .goog-button-logo-svg {
+    width: 4rem;
+    height: 5rem;
+  }
+  .app-button-text-block {
+    padding: 2.5rem 0 2.5rem 2.5rem;
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1;
+    text-transform: uppercase;
+    letter-spacing: 0.07rem;
+  }
+  .app-button-text-2nd-line {
+    display: block;
+    font-weight: 700;
+    padding-top: 0.4rem;
+  }
+  /*конец хедера*/
+
+  /*начало основной области*/
+
+  /*начало футболиста*/
+
+  .person {
+    position: relative;
+  }
+  .person__title {
+    font-size: 8rem;
+  }
+  .person__title-right {
+    padding: 10rem 20rem 3.8rem 100.7rem;
+  }
+  .person__picture-block-footballer {
+    margin: 0;
+    padding: 0;
+    min-height: 0;
+  }
+  .person__picture-block-footballer {
+    margin: 0;
+    padding: 0;
+    width: 0;
+    height: 0;
+  }
+  .person__picture-footballer {
+    width: 56.6rem;
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    top: 2.7rem;
+    left: 39.2rem;
+  }
+  .person__point-1 {
+    background-color: #ffffff;
+  }
+  .person__block-paddings-right {
+    padding: 5.6rem 20rem 5.6rem 100.7rem;
+  }
+  .person_title-block {
+    padding-bottom: 2rem;
+  }
+  .person__presubtitle {
+    font-size: 1.8rem;
+    letter-spacing: 0.09rem;
+    padding-right: 1.5rem;
+    line-height: 1;
+  }
+  .person__presubtitle:after {
+    width: 1.9rem;
+    height: 0.5rem;
+    margin-top: 0.3rem;
+    border-radius: 0.2rem;
+  }
+  .person__presubtitle-inverse {
+    color: #0a0e34;
+  }
+  .person__presubtitle-inverse:after {
+    margin-top: 0.3rem;
+    background-color: #efefef;
+  }
+  .person__subtitle {
+    font-size: 3.6rem;
+    letter-spacing: 0.16rem;
+  }
+  .person__description {
+    color: #000000;
+    font-size: 2rem;
+    line-height: 2.8rem;
+    letter-spacing: 0.1rem;
+  }
+  .person__description-inverse-at {
+    color: #ffffff;
+  }
+  /*конец футболиста*/
+
+  /*начало баскетболиста*/
+
+  .person__title-left {
+    padding: 10rem 111rem 3.8rem 19rem;
+  }
+  .person__picture-block-basketballer {
+    margin: 0;
+    padding: 0;
+    min-height: 0;
+  }
+  .person__picture-block-basketballer {
+    margin: 0;
+    padding: 0;
+    width: 0;
+    height: 0;
+  }
+  .person__picture-basketballer {
+    padding: 0;
+    margin: 0;
+    position: absolute;
+    width: 99.1rem;
+    top: 2.1rem;
+    right: 12.5rem;
+  }
+  .person__block-paddings-left {
+    padding: 5.6rem 98rem 5.6rem 19rem;
+  }
+  .person_title-block-1-players {
+    padding-right: 13rem;
+  }
+  .person__presubtitle-inverse-players:after {
+    background-color: #ffffff;
+  }
+
+  /* второй блок в макете имеет аномальный отступ снизу */
+  .person__block-paddings-left:nth-last-child(-n + 2) {
+    padding-bottom: 8.8rem;
+  }
+  /*конец баскетболиста*/
+
+  /*начало экшнс*/
+
+  .actions__block {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    justify-content: center;
+    -ms-align-items: flex-start;
+    align-items: flex-start;
+    position: relative;
+  }
+  .actions__block:nth-child(even) {
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -o-flex-direction: row;
+    flex-direction: row;
+  }
+  .actions__block:nth-child(even) {
+    -webkit-flex-direction: row-reverse;
+    -moz-flex-direction: row-reverse;
+    -ms-flex-direction: row-reverse;
+    -o-flex-direction: row-reverse;
+    flex-direction: row-reverse;
+  }
+  .actions__pic {
+    position: static;
+    width: 50%;
+    height: 100%;
+    min-height: 73rem;
+    overflow: hidden;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+  }
+  .action__picture {
+    object-fit: cover;
+    width: 96rem;
+    height: 73rem;
+    /*      width: 100%; 'эта схема почему-то рассыпается на ширине 2000<'
+      height: 100%;
+      min-height: 100%;
+      min-width: 100%;*/
+  }
+  .actions__num-block {
+    width: 16.8rem;
+    height: 15.5rem;
+    bottom: unset;
+    top: 21rem;
+    left: calc(96rem - (16.8rem / 2));
+  }
+  .actions__num {
+    color: #f5f6f7;
+    font-size: 2.4rem;
+    letter-spacing: 0.12rem;
+  }
+  .actions__num:after {
+    content: '';
+    margin-top: 0.7rem;
+    opacity: 0.3;
+    width: 2.6rem;
+    height: 0.5rem;
+    border-radius: 0.2rem;
+  }
+  .actions__desc {
+    width: 50%;
+  }
+  .actions__desc-right {
+    padding: 24.5rem 19rem 10rem 12.5rem;
+  }
+  .actions__desc-left {
+    padding: 24.5rem 12.5rem 10rem 19rem;
+  }
+  .actions__title {
+    display: block;
+    color: #e7e7e7;
+    font-size: 8rem;
+  }
+  .actions__title-margins {
+    padding-bottom: 6.1rem;
+  }
+  .actions__desc-text {
+    font-size: 2.4rem;
+    line-height: 2.8rem;
+    letter-spacing: 0.12rem;
+  }
+  /*конец экшнс*/
+
+  /*конец основной области*/
+
+  /*начало футера*/
+
+  .footer {
+    background: url(../img/game_1280.jpg) #0f1133;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    padding: 23.8541667vh 20rem 5.4166667vh;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+  }
+  .footer__title-box {
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    display: -o-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    -moz-flex-direction: row;
+    -ms-flex-direction: row;
+    -o-flex-direction: row;
+    flex-direction: row;
+    padding-bottom: 1rem;
+    justify-content: center;
+    -ms-align-items: flex-start;
+    align-items: flex-start;
+  }
+  .footer__logo-icon-box {
+    width: 13rem;
+    height: 13.7rem;
+    margin: 0 3.2rem 0 0;
+  }
+  .footer__logo-icon {
+    width: 10.3rem;
+  }
+  .footer__subtitle-box {
+    padding: 0;
+    margin: 0;
+  }
+  .footer__title {
+    font-size: 8rem;
+    letter-spacing: 0.441rem;
+    padding-bottom: 2rem;
+    text-align: left;
+  }
+  .footer__subtitle {
+    font-size: 3rem;
+    text-align: left;
+    padding-left: 0.5rem;
+  }
+  .footer__text-logo {
+    padding-top: 21rem;
+  }
+
+  /*конец футера*/
+}
